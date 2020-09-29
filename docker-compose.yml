@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  python-sandbox:
+    restart: always
+    build: .
+    container_name: 'python-sandbox'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./src:/root/src
+      - ./data:/root/data
